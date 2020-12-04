@@ -1,0 +1,87 @@
+{
+  "id": "7bf25e06-0bdd-4e76-b5e1-15e2c2dd70cb",
+  "version": "2.0",
+  "name": "verify",
+  "url": "http://automationpractice.com",
+  "tests": [{
+    "id": "a2458e7e-2540-4518-83b5-2c7d2f363d32",
+    "name": "verify",
+    "commands": [{
+      "id": "e9f3bbba-d437-40c8-96cd-b8b790c8021b",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e37b281f-07b0-4742-b134-043b357f331b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "742x638",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ba5b7ab-49dd-4644-9f99-53b702a6be5c",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff81d251-46b7-48f7-9e12-0f6bcd1bd61c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "74d00494-3a81-423e-b132-8ed3454a1bda",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Login - My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e8f3860-82cb-4b24-bc49-971a3ae44f23",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SubmitLogin > span",
+      "targets": [
+        ["css=#SubmitLogin > span", "css:finder"],
+        ["xpath=//button[@id='SubmitLogin']/span", "xpath:idRelative"],
+        ["xpath=//p[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78e23afb-9b8d-4317-b92b-34bdc5a083b5",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=ol > li",
+      "targets": [
+        ["css=ol > li", "css:finder"],
+        ["xpath=//div[@id='center_column']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'An email address required.')]", "xpath:innerText"]
+      ],
+      "value": "An email address required."
+    }]
+  }],
+  "suites": [{
+    "id": "de78e4c7-7142-4991-8ded-9fffee639264",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a2458e7e-2540-4518-83b5-2c7d2f363d32"]
+  }],
+  "urls": ["http://automationpractice.com/"],
+  "plugins": []
+}
